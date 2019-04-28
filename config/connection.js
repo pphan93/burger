@@ -1,18 +1,26 @@
 var mysql = require('mysql');
 
-var config = {
-    host: "localhost",
+var config;
 
-    // Your port; if not 3306
-    port: 3306,
+if (process.env.JAWSDB_URL) {
+    config = process.env.JAWSDB_URL;
+} else {
+    config = {
+        host: "localhost",
+    
+        // Your port; if not 3306
+        port: 3306,
+    
+        // Your username
+        user: "root",
+    
+        // Your password
+        password: "root",
+        database: "burgers_db"
+    };
+}
 
-    // Your username
-    user: "root",
 
-    // Your password
-    password: "root",
-    database: "burgers_db"
-};
 
 
 var connection = mysql.createConnection(config);
