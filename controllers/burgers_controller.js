@@ -16,18 +16,19 @@ router.get("/", function(req, res) {
   });
   
   router.post("/api/burger", function(req, res) {
-    burger.create([req.body.name], function(result) {
-      // Send back the ID of the new quote
-      res.json({ id: result.insertId });
+
+    console.log(req.body.name)
+    burger.insert([req.body.name], function(result) {
+      res.status(200).end();
     });
   });
   
   router.put("/api/burger/:id", function(req, res) {
     var burgerID = req.params.id;
   
-    console.log("condition", condition);
+    console.log("condition", burgerID);
   
-    burger.update(
+    burger.updateOne(
         burgerID,
       function(result) {
         if (result.changedRows === 0) {
