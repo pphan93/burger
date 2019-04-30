@@ -5,18 +5,12 @@
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background: #0ac
-      repeating-conic-gradient(
-        darkorange 0 15deg,
-        orange 0 30deg,
-        rgb(1, 136, 19) 0 45deg,
-        orange 0 60deg
-      );
+    background: linear-gradient(330deg, #FFC7A4 0%, #73DA8C 25%, #F9EE80 50%, #DD6642 75%, #E7896E 100%);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: -ms-flexbox;
     display: flex;
-    color: #fff;
+    color: rgb(255, 136, 0);
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
   }
